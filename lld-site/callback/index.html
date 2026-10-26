@@ -1,0 +1,15 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Connected · Legal Loopholes Daily</title><link rel="stylesheet" href="../style.css"><link rel="icon" href="../icon.png"></head><body><main>
+<header><img src="../icon.png" alt=""><a href=".././">Legal Loopholes Daily</a></header>
+<nav><a href=".././">Home</a><a href="../privacy-policy/">Privacy Policy</a><a href="../terms-of-service/">Terms of Service</a></nav>
+<h1>Authorization code</h1>
+<p class="muted">Copy this code and paste it into the automation setup. It expires in a few minutes.</p>
+<div class="box" id="code">No code in this link.</div>
+<button id="copy" hidden>Copy code</button>
+<script>
+const p=new URLSearchParams(location.search), c=p.get('code'), e=p.get('error_description')||p.get('error');
+const box=document.getElementById('code'), b=document.getElementById('copy');
+if(c){box.textContent=c;b.hidden=false;b.onclick=()=>{navigator.clipboard.writeText(c).then(()=>b.textContent='Copied');};}
+else if(e){box.textContent='Error: '+e;}
+</script>
+<p class="muted" style="margin-top:40px">Contact: <a href="mailto:legalloopholeshq@outlook.com">legalloopholeshq@outlook.com</a></p></main></body></html>
